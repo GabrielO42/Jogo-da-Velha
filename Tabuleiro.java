@@ -65,10 +65,30 @@ public class Tabuleiro {
     }
     
     public void verificarGanhador(char simbolo, int numeroJogador){
-            if(A3==simbolo && B2==simbolo && C1==simbolo);
-     else{
-     System.out.print("Jogador 1 ganhou");
-     }
+         if(A3 == simbolo && B2 == simbolo && C1 == simbolo) {
+           this.houveGanhadorUltimaRodada = true;
+       }
+    else if (A1 == simbolo && B1 == simbolo && C1 == simbolo) {
+        this.houveGanhadorUltimaRodada = true;
+    }else if (A2 == simbolo && A2 == simbolo && C2 == simbolo) {
+        this.houveGanhadorUltimaRodada = true;
+        
+    }else if (B3 == simbolo && B3 == simbolo && C3 == simbolo) {
+     this.houveGanhadorUltimaRodada = true;   
+    }else if (A1 == simbolo && B2 == simbolo && C3 == simbolo) {
+        this.houveGanhadorUltimaRodada = true;
+    }else if (C1 == simbolo && C2 == simbolo && C3 == simbolo) {
+        this.houveGanhadorUltimaRodada = true;
+    }else if (B1 == simbolo && B2 == simbolo && B3 == simbolo) {
+        this.houveGanhadorUltimaRodada = true;
+    }else if (A1 == simbolo && A2 == simbolo && A3 == simbolo) {
+        this.houveGanhadorUltimaRodada = true;
+    }else if (A1 == simbolo && B1 == simbolo && C1 == simbolo) {
+        this.houveGanhadorUltimaRodada = true;
+    }
+         if (this.houveGanhadorUltimaRodada) {
+        System.out.println(" Parabéns! O Jogador " + numeroJogador + " (" + simbolo + ") venceu o jogo!");
+    }
     }
     
     public void organizar(){
@@ -96,37 +116,40 @@ public class Tabuleiro {
     
     public void marcarJogada(char simbolo, String coordenada){
         switch(coordenada){
+            case "a1":
             case "A1":
                    this.A1 = simbolo;
                 break;
+            case "a2":
             case "A2":
                    this.A2 = simbolo;
                 break;
+            case "a3":    
             case "A3":
                    this.A3 = simbolo;
                 break; 
-            
+            case "b1":
             case "B1":
                    this.B1 = simbolo;
                 break;    
-            
+            case "b2":
             case "B2":
                    this.B2 = simbolo;
                 break; 
-                
+            case "b3":    
             case "B3":
                    this.B3 = simbolo;
                 break;    
-                
+            case "c1":    
             case "C1":
                    this.C1 = simbolo;
                 break;  
-                
+            case "c2":    
             case "C2":
                    this.C2 = simbolo;
                 break;
-                
-            case "c3":
+            case "c3":    
+            case "C3":
                    this.C3 = simbolo;
                 break;
         }

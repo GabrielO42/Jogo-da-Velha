@@ -41,9 +41,10 @@ public class JogodaVelha {
            tabuleiro.setJogadorDaVez(1);
            tabuleiro.mostrarTabuleiro();
            tabuleiro.verificarGanhador(jogador2.getSimbolo(), 2);
+         
             }
             
-            
         }while(tabuleiro.isHouveGanhadorUltimaRodada() == false);
-    }
+        
+            }
 }
